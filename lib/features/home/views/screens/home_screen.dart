@@ -18,7 +18,14 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
         title: const Text('Shrijan Regmi'),
       ),
       body: const Center(
-        child: Text('Hello World!'),
+        child: Text(
+          'ELIOT',
+          style: TextStyle(
+            fontSize: 300.0,
+            fontWeight: FontWeight.w900,
+            letterSpacing: 10.0,
+          ),
+        ),
       ),
     );
   }

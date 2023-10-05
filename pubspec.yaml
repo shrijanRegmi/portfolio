@@ -92,6 +92,10 @@ flutter:
         - asset: fonts/PPMori-ExtralightItalic.otf
           weight: 300
           style: italic
+    - family: Arges
+      fonts:
+        - asset: fonts/Arges-ExtraBold.ttf
+          weight: 900
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
