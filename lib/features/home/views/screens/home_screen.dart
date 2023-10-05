@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:shrijan/features/home/views/widgets/loading_container.dart';
 
 class HomeScreen extends ConsumerStatefulWidget {
   const HomeScreen({super.key});
@@ -13,20 +14,8 @@ class HomeScreen extends ConsumerStatefulWidget {
 class _HomeScreenState extends ConsumerState<HomeScreen> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('Shrijan Regmi'),
-      ),
-      body: const Center(
-        child: Text(
-          'ELIOT',
-          style: TextStyle(
-            fontSize: 300.0,
-            fontWeight: FontWeight.w900,
-            letterSpacing: 10.0,
-          ),
-        ),
-      ),
+    return const Scaffold(
+      body: LoadingContainer(),
     );
   }
 }
