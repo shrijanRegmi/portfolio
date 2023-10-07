@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
@@ -46,7 +47,7 @@ class _SelectedWorksTitleContainerState
         Row(
           children: [
             Text(
-              'Selected'.toUpperCase(),
+              'selected'.tr().toUpperCase(),
               style: TextStyle(
                 fontFamily: AppFonts.arges,
                 fontWeight: FontWeight.w900,
@@ -62,7 +63,7 @@ class _SelectedWorksTitleContainerState
           mainAxisAlignment: MainAxisAlignment.end,
           children: [
             Text(
-              'Works'.toUpperCase(),
+              'works'.tr().toUpperCase(),
               style: TextStyle(
                 fontFamily: AppFonts.arges,
                 fontWeight: FontWeight.w900,

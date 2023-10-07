@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
@@ -33,7 +34,7 @@ class _IntroContainerState extends ConsumerState<IntroContainer> {
         Row(
           children: [
             Text(
-              'Regmi'.toUpperCase(),
+              'regmi'.tr().toUpperCase(),
               style: TextStyle(
                 fontFamily: AppFonts.arges,
                 fontWeight: FontWeight.w900,
@@ -47,7 +48,7 @@ class _IntroContainerState extends ConsumerState<IntroContainer> {
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
             Text(
-              'Shrijan'.toUpperCase(),
+              'shrijan'.tr().toUpperCase(),
               style: TextStyle(
                 fontFamily: AppFonts.arges,
                 fontWeight: FontWeight.w900,
@@ -71,25 +72,25 @@ class _IntroContainerState extends ConsumerState<IntroContainer> {
           crossAxisAlignment: CrossAxisAlignment.start,
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            const Text(
-              "I'M A DYNAMIC MOBILE AND WEB DEVELOPER, FUELED BY NEPAL'S BOUNDLESS INSPIRATION.",
-              style: TextStyle(
+            Text(
+              "intro_text1".tr().toUpperCase(),
+              style: const TextStyle(
                 fontFamily: AppFonts.ppMori,
                 fontSize: 20.0,
                 height: 0.9,
               ),
             ),
-            const Text(
-              "FOCUSING ON CREATING PURPOSEFUL USER INTERFACES    *",
-              style: TextStyle(
+            Text(
+              "${'intro_text2'.tr().toUpperCase()}    *",
+              style: const TextStyle(
                 fontFamily: AppFonts.ppMori,
                 fontSize: 20.0,
                 height: 0.9,
               ),
             ),
-            const Text(
-              "*     WITH A HINT ON INTERACTIONS & ANIMATIONS",
-              style: TextStyle(
+            Text(
+              "*     ${'intro_text3'.tr().toUpperCase()}",
+              style: const TextStyle(
                 fontFamily: AppFonts.ppMori,
                 fontSize: 20.0,
                 height: 0.9,
@@ -98,9 +99,9 @@ class _IntroContainerState extends ConsumerState<IntroContainer> {
             SizedBox(
               height: 10.h,
             ),
-            const Text(
-              "SCROLL TO EXPLORE‍",
-              style: TextStyle(
+            Text(
+              "scroll_to_explore".tr().toUpperCase(),
+              style: const TextStyle(
                 fontFamily: AppFonts.ppMori,
                 decoration: TextDecoration.underline,
                 fontSize: 20.0,

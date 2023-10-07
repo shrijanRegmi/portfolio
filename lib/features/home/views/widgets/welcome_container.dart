@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
@@ -54,16 +55,16 @@ class _WelcomeContainerState extends ConsumerState<WelcomeContainer>
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          const Text(
-            'Shrijan',
-            style: TextStyle(
+          Text(
+            'shrijan'.tr(),
+            style: const TextStyle(
               fontSize: 18.0,
               color: AppColors.white,
               fontFamily: AppFonts.ppMori,
             ),
           ),
           Text(
-            'Regmi'.toUpperCase(),
+            'regmi'.tr().toUpperCase(),
             style: const TextStyle(
               fontSize: 18.0,
               color: AppColors.white,
@@ -85,7 +86,7 @@ class _WelcomeContainerState extends ConsumerState<WelcomeContainer>
       curve: Curves.slowMiddle,
       child: Center(
         child: Text(
-          'Welcome!'.toUpperCase(),
+          '${'welcome'.tr()}!'.toUpperCase(),
           style: TextStyle(
             fontSize: 300.spMin,
             fontFamily: AppFonts.arges,
@@ -99,25 +100,25 @@ class _WelcomeContainerState extends ConsumerState<WelcomeContainer>
   }
 
   Widget _shortIntroSectionBuilder() {
-    return const Animator.boxSlide(
-      beginOffset: Offset(0.0, 18.0),
-      endOffset: Offset(0.0, 0.0),
-      duration: Duration(milliseconds: 2000),
+    return Animator.boxSlide(
+      beginOffset: const Offset(0.0, 18.0),
+      endOffset: const Offset(0.0, 0.0),
+      duration: const Duration(milliseconds: 2000),
       curve: Curves.easeInOutCubicEmphasized,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Text(
-            'Developer',
-            style: TextStyle(
+            'developer'.tr(),
+            style: const TextStyle(
               fontSize: 18.0,
               color: AppColors.white,
               fontFamily: AppFonts.ppMori,
             ),
           ),
           Text(
-            'Flutter Expert',
-            style: TextStyle(
+            'flutter_expert'.tr(),
+            style: const TextStyle(
               fontSize: 18.0,
               color: AppColors.white,
               fontFamily: AppFonts.ppMori,

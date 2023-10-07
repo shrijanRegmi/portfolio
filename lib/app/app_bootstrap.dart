@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:shrijan/app/app.dart';
@@ -15,11 +16,23 @@ class AppBootstrap {
   final Flavor _flavor;
 
   /// The main entry point of the application.
-  void _init() {
+  void _init() async {
+    WidgetsFlutterBinding.ensureInitialized();
+
+    await _initPlugins();
+
     runApp(
       ProviderScope(
         overrides: providerOverrides,
-        child: const MyApp(),
+        child: EasyLocalization(
+          path: 'assets/translations',
+          supportedLocales: const [
+            Locale('en'),
+            Locale('ne'),
+          ],
+          fallbackLocale: const Locale('en'),
+          child: const MyApp(),
+        ),
       ),
     );
   }
@@ -32,5 +45,17 @@ class AppBootstrap {
           (ref) => ref.watch(providerOfDevAppConfig),
         )
     ];
+  }
+
+  /// Initializes various plugins.
+  Future<void> _initPlugins() async {
+    await Future.wait([
+      _initLocalizations(),
+    ]);
+  }
+
+  /// Initializes the localization.
+  Future<void> _initLocalizations() async {
+    await EasyLocalization.ensureInitialized();
   }
 }
