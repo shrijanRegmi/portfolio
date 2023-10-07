@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:shrijan/features/home/views/widgets/intro_contrainer.dart';
+import 'package:shrijan/features/home/views/widgets/selected_works_title_container.dart';
 import 'package:shrijan/features/home/views/widgets/welcome_container.dart';
 import 'package:shrijan/features/shared/views/widgets/common_widgets/main_appbar.dart';
 
@@ -25,6 +26,10 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
               child: Column(
                 children: [
                   IntroContainer(),
+                  SizedBox(
+                    height: 200,
+                  ),
+                  SelectedWorksTitleContainer(),
                   SizedBox(
                     height: 5000,
                   ),

@@ -33,25 +33,25 @@ class _IntroContainerState extends ConsumerState<IntroContainer> {
         Row(
           children: [
             Text(
-              'Shrijan'.toUpperCase(),
+              'Regmi'.toUpperCase(),
               style: TextStyle(
                 fontFamily: AppFonts.arges,
                 fontWeight: FontWeight.w900,
-                fontSize: 530.sp,
+                fontSize: 700.sp,
                 height: 1.h,
               ),
             ),
           ],
         ),
         Row(
-          mainAxisAlignment: MainAxisAlignment.end,
+          mainAxisAlignment: MainAxisAlignment.start,
           children: [
             Text(
-              'Regmi'.toUpperCase(),
+              'Shrijan'.toUpperCase(),
               style: TextStyle(
                 fontFamily: AppFonts.arges,
                 fontWeight: FontWeight.w900,
-                fontSize: 530.sp,
+                fontSize: 700.sp,
                 height: 1.h,
               ),
             ),
@@ -63,10 +63,10 @@ class _IntroContainerState extends ConsumerState<IntroContainer> {
 
   Widget _introBuilder() {
     return Padding(
-      padding: const EdgeInsets.only(top: 21.0),
+      padding: const EdgeInsets.only(top: 30.0),
       child: SizedBox(
         width: 300.w,
-        height: 420.sp,
+        height: 555.sp,
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
