@@ -48,7 +48,7 @@ class _MainAppbarState extends ConsumerState<MainAppbar>
       title: _animtedTitleBuilder(),
       elevation: 0.0,
       leading: const SizedBox(width: 0.0),
-      leadingWidth: 20,
+      leadingWidth: 30,
       backgroundColor: Theme.of(context).scaffoldBackgroundColor,
       titleTextStyle: const TextStyle(
         fontFamily: AppFonts.arges,
@@ -123,7 +123,7 @@ class _MainAppbarState extends ConsumerState<MainAppbar>
 
   Widget _menuBuilder() {
     return Padding(
-      padding: const EdgeInsets.only(right: 40),
+      padding: const EdgeInsets.only(right: 50),
       child: MouseRegion(
         cursor: SystemMouseCursors.click,
         child: Column(

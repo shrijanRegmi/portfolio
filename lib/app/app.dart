@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
       designSize: const Size(1512, 796),
       builder: (context, child) {
         return MaterialApp(
-          title: '${'shrijan'.tr()} ${'regmi'.tr()}',
+          title: 'Shrijan Regmi',
           debugShowCheckedModeBanner: false,
           localizationsDelegates: context.localizationDelegates,
           supportedLocales: context.supportedLocales,

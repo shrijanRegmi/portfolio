@@ -38,8 +38,9 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
   Widget _appbarBuilder() {
     return SliverAppBar(
       elevation: 0.0,
+      expandedHeight: 80.h,
       flexibleSpace: MainAppbar(
-        height: 100.h,
+        height: 80.h,
       ),
     );
   }
