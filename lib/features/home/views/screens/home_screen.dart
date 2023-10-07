@@ -30,9 +30,6 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                     height: 200,
                   ),
                   SelectedWorksTitleContainer(),
-                  SizedBox(
-                    height: 5000,
-                  ),
                 ],
               ),
             ),

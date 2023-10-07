@@ -1,9 +1,9 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:shrijan/app/app_colors.dart';
 import 'package:shrijan/app/app_fonts.dart';
+import 'package:sr_components/sr_components.dart';
 
 class SelectedWorksTitleContainer extends ConsumerStatefulWidget {
   const SelectedWorksTitleContainer({super.key});
@@ -30,10 +30,10 @@ class _SelectedWorksTitleContainerState
       ),
       child: Stack(
         children: [
-          _nameBuilder(),
+          _titleBuilder(),
           Positioned(
             left: 0.0,
-            bottom: 40.sp,
+            bottom: 50.sp,
             child: _rangeBuilder(),
           ),
         ],
@@ -41,20 +41,15 @@ class _SelectedWorksTitleContainerState
     );
   }
 
-  Widget _nameBuilder() {
+  Widget _titleBuilder() {
     return Column(
       children: [
         Row(
           children: [
-            Text(
+            SRText.displayMedium(
               'selected'.tr().toUpperCase(),
-              style: TextStyle(
-                fontFamily: AppFonts.arges,
-                fontWeight: FontWeight.w900,
+              style: const TextStyle(
                 color: AppColors.white,
-                fontSize: 355.sp,
-                height: 1.sp,
-                letterSpacing: 5.sp,
               ),
             ),
           ],
@@ -62,15 +57,10 @@ class _SelectedWorksTitleContainerState
         Row(
           mainAxisAlignment: MainAxisAlignment.end,
           children: [
-            Text(
+            SRText.displayMedium(
               'works'.tr().toUpperCase(),
-              style: TextStyle(
-                fontFamily: AppFonts.arges,
-                fontWeight: FontWeight.w900,
+              style: const TextStyle(
                 color: AppColors.white,
-                fontSize: 355.sp,
-                height: 1.h,
-                letterSpacing: 5.sp,
               ),
             ),
           ],

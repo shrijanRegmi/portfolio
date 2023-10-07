@@ -1,8 +1,8 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:shrijan/app/app_fonts.dart';
+import 'package:sr_components/sr_components.dart';
 
 class IntroContainer extends ConsumerStatefulWidget {
   const IntroContainer({super.key});
@@ -20,7 +20,7 @@ class _IntroContainerState extends ConsumerState<IntroContainer> {
         children: [
           _nameBuilder(),
           Positioned(
-            right: 0.0,
+            right: 40.0,
             child: _introBuilder(),
           ),
         ],
@@ -33,28 +33,16 @@ class _IntroContainerState extends ConsumerState<IntroContainer> {
       children: [
         Row(
           children: [
-            Text(
+            SRText.displayLarge(
               'regmi'.tr().toUpperCase(),
-              style: TextStyle(
-                fontFamily: AppFonts.arges,
-                fontWeight: FontWeight.w900,
-                fontSize: 700.sp,
-                height: 1.h,
-              ),
             ),
           ],
         ),
         Row(
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
-            Text(
+            SRText.displayLarge(
               'shrijan'.tr().toUpperCase(),
-              style: TextStyle(
-                fontFamily: AppFonts.arges,
-                fontWeight: FontWeight.w900,
-                fontSize: 700.sp,
-                height: 1.h,
-              ),
             ),
           ],
         ),
@@ -67,12 +55,12 @@ class _IntroContainerState extends ConsumerState<IntroContainer> {
       padding: const EdgeInsets.only(top: 30.0),
       child: SizedBox(
         width: 300.w,
-        height: 555.sp,
+        height: 525.sp,
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            Text(
+            SRText.titleLarge(
               "intro_text1".tr().toUpperCase(),
               style: const TextStyle(
                 fontFamily: AppFonts.ppMori,
@@ -80,7 +68,7 @@ class _IntroContainerState extends ConsumerState<IntroContainer> {
                 height: 0.9,
               ),
             ),
-            Text(
+            SRText.titleLarge(
               "${'intro_text2'.tr().toUpperCase()}    *",
               style: const TextStyle(
                 fontFamily: AppFonts.ppMori,
@@ -88,7 +76,7 @@ class _IntroContainerState extends ConsumerState<IntroContainer> {
                 height: 0.9,
               ),
             ),
-            Text(
+            SRText.titleLarge(
               "*     ${'intro_text3'.tr().toUpperCase()}",
               style: const TextStyle(
                 fontFamily: AppFonts.ppMori,
@@ -99,7 +87,7 @@ class _IntroContainerState extends ConsumerState<IntroContainer> {
             SizedBox(
               height: 10.h,
             ),
-            Text(
+            SRText.titleLarge(
               "scroll_to_explore".tr().toUpperCase(),
               style: const TextStyle(
                 fontFamily: AppFonts.ppMori,
