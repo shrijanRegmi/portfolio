@@ -32,7 +32,7 @@ class AppTheme {
               letterSpacing: 4.0,
             ),
             displaySmall: defaultTextTheme.displayMedium?.copyWith(
-              fontSize: 300.sp,
+              fontSize: 324.sp,
               fontWeight: FontWeight.w900,
               fontFamily: AppFonts.arges,
               height: 1.0,
