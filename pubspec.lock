@@ -583,7 +583,7 @@ packages:
     description:
       path: "."
       ref: main
-      resolved-ref: "68135af7c11105bf70c2c69adb407983aab49f8d"
+      resolved-ref: efeb2943db1c344dba0e375ecca2288cda062075
       url: "git@personal:shrijanRegmi/sr_components.git"
     source: git
     version: "1.0.0+1"
